@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on linux)" generated="2025-12-05T11:16:53.044885" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/opt/robot/tests">
+<suite id="s1-s1" name="Consul" source="/opt/robot/tests/consul">
+<suite id="s1-s1-s1" name="Crud" source="/opt/robot/tests/consul/crud">
+<suite id="s1-s1-s1-s1" name="Crud" source="/opt/robot/tests/consul/crud/crud.robot">
+<kw name="Preparation" type="SETUP">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-12-05T11:16:54.711880" level="INFO">${random_id} = etv</msg>
+<var>${random_id}</var>
+<arg>3</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-12-05T11:16:54.711506" elapsed="0.000423"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-05T11:16:54.713187" level="INFO">${test_key} = test_key_etv</msg>
+<arg>${test_key}</arg>
+<arg>test_key_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-05T11:16:54.712440" elapsed="0.000812"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-05T11:16:54.714286" level="INFO">${path_test_key} = path_test_key/test_data_etv</msg>
+<arg>${path_test_key}</arg>
+<arg>path_test_key/test_data_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-05T11:16:54.713660" elapsed="0.000676"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-05T11:16:54.715284" level="INFO">${test_value} = test_value_etv</msg>
+<arg>${test_value}</arg>
+<arg>test_value_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-05T11:16:54.714665" elapsed="0.000670"/>
+</kw>
+<status status="PASS" start="2025-12-05T11:16:54.710709" elapsed="0.004959"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Test Add Data" line="15">
+<kw name="Add Test Data To Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.723361" level="FAIL">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.716743" elapsed="0.008900">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.726049" elapsed="0.000077"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>${test_value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.716392" elapsed="0.009958">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.715868" elapsed="0.010729">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Test Read Data" line="19">
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.733477" level="FAIL">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.729674" elapsed="0.004830">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.734895" elapsed="0.000074"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>${test_value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.729349" elapsed="0.005824">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.728913" elapsed="0.006491">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Test Update Data" line="23">
+<kw name="Update Test Data In Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.742517" level="FAIL">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.738442" elapsed="0.004966">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.743811" elapsed="0.000074"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>update_${test_value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.738120" elapsed="0.005960">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<arg>${test_key}</arg>
+<arg>update_${test_value}</arg>
+<status status="NOT RUN" start="2025-12-05T11:16:54.744311" elapsed="0.000066"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.737717" elapsed="0.006861">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Test Delete Data" line="28">
+<kw name="Delete Test Data From Consul" owner="keywords">
+<kw name="Delete Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.751068" level="FAIL">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.747431" elapsed="0.004500">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.752308" elapsed="0.000073"/>
+</kw>
+<arg>${test_key}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.747125" elapsed="0.005453">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.746743" elapsed="0.006044">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t5" name="Test Create Key Under Path" line="32">
+<kw name="Add Test Data To Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.759200" level="FAIL">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.755695" elapsed="0.004477">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.760558" elapsed="0.000074"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>path_${test_value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.755345" elapsed="0.005480">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.754945" elapsed="0.006091">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t6" name="Test Read Data Under Path" line="36">
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.809907" level="FAIL">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.763947" elapsed="0.047655">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.812009" elapsed="0.000076"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>path_${test_value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.763614" elapsed="0.048676">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.763208" elapsed="0.049296">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t7" name="Test Update Data Under Path" line="40">
+<kw name="Update Test Data In Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.819230" level="FAIL">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.815368" elapsed="0.004792">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.820556" elapsed="0.000074"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>update_path_${test_value}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.815050" elapsed="0.005771">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<arg>${path_test_key}</arg>
+<arg>update_path_${test_value}</arg>
+<status status="NOT RUN" start="2025-12-05T11:16:54.821058" elapsed="0.000069"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.814658" elapsed="0.006672">ACLPermissionDenied: rpc error making call: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<test id="s1-s1-s1-s1-t8" name="Test Delete Data Under Path" line="45">
+<kw name="Delete Test Data From Consul" owner="keywords">
+<kw name="Delete Data" owner="ConsulLibrary">
+<msg time="2025-12-05T11:16:54.827854" level="FAIL">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.824169" elapsed="0.004560">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-05T11:16:54.829104" elapsed="0.000074"/>
+</kw>
+<arg>${path_test_key}</arg>
+<status status="FAIL" start="2025-12-05T11:16:54.823893" elapsed="0.005489">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-05T11:16:54.823505" elapsed="0.006087">ACLPermissionDenied: ACL system must be bootstrapped before making any requests that require authorization: ACL not found</status>
+</test>
+<status status="FAIL" start="2025-12-05T11:16:53.322084" elapsed="1.509893"/>
+</suite>
+<status status="FAIL" start="2025-12-05T11:16:53.320437" elapsed="1.515008"/>
+</suite>
+<status status="FAIL" start="2025-12-05T11:16:53.318625" elapsed="1.517441"/>
+</suite>
+<status status="FAIL" start="2025-12-05T11:16:53.243714" elapsed="1.592904"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="8" skip="0">crud</stat>
+<stat pass="0" fail="8" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="8" skip="0">Tests</stat>
+<stat name="Consul" id="s1-s1" pass="0" fail="8" skip="0">Tests.Consul</stat>
+<stat name="Crud" id="s1-s1-s1" pass="0" fail="8" skip="0">Tests.Consul.Crud</stat>
+<stat name="Crud" id="s1-s1-s1-s1" pass="0" fail="8" skip="0">Tests.Consul.Crud.Crud</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-05T11:16:53.010358" level="WARN">Error in file '/opt/robot/tests/consul/alerts/alerts.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.018423" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 36: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.018712" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 48: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.019310" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 83: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.026091" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup_s3.robot' on line 50: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.026666" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup_s3.robot' on line 85: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.034800" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 27: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.034996" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 32: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-05T11:16:53.035411" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 54: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

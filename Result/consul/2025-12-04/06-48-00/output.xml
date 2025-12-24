@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on linux)" generated="2025-12-04T06:48:01.822513" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/opt/robot/tests">
+<suite id="s1-s1" name="Consul" source="/opt/robot/tests/consul">
+<suite id="s1-s1-s1" name="Crud" source="/opt/robot/tests/consul/crud">
+<suite id="s1-s1-s1-s1" name="Crud" source="/opt/robot/tests/consul/crud/crud.robot">
+<kw name="Preparation" type="SETUP">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-12-04T06:48:03.113783" level="INFO">${random_id} = lvt</msg>
+<var>${random_id}</var>
+<arg>3</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.113382" elapsed="0.000452"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.115050" level="INFO">${test_key} = test_key_lvt</msg>
+<arg>${test_key}</arg>
+<arg>test_key_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.114325" elapsed="0.000787"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.116262" level="INFO">${path_test_key} = path_test_key/test_data_lvt</msg>
+<arg>${path_test_key}</arg>
+<arg>path_test_key/test_data_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.115484" elapsed="0.000840"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.117316" level="INFO">${test_value} = test_value_lvt</msg>
+<arg>${test_value}</arg>
+<arg>test_value_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.116687" elapsed="0.000678"/>
+</kw>
+<status status="PASS" start="2025-12-04T06:48:03.112527" elapsed="0.005151"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Test Add Data" line="15">
+<kw name="Add Test Data To Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.128398" level="INFO">${response} = True</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.118901" elapsed="0.009541"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.128820" elapsed="0.000205"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.118538" elapsed="0.010662"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.117925" elapsed="0.011480"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Test Read Data" line="19">
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.190778" level="INFO">${response} = test_value_lvt</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.132585" elapsed="0.058247"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.191603" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.191347" elapsed="0.000326"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.132261" elapsed="0.059723"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.131790" elapsed="0.060419"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Test Update Data" line="23">
+<kw name="Update Test Data In Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.203828" level="INFO">${response} = True</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.195338" elapsed="0.008533"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.204242" elapsed="0.000196"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>update_${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.194982" elapsed="0.009619"/>
+</kw>
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.207432" level="INFO">${response} = update_test_value_lvt</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.205160" elapsed="0.002310"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.208053" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.207817" elapsed="0.000296"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>update_${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.204835" elapsed="0.003559"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.194499" elapsed="0.014092"/>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Test Delete Data" line="28">
+<kw name="Delete Test Data From Consul" owner="keywords">
+<kw name="Delete Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.220643" level="INFO">${response} = True</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.211525" elapsed="0.009160"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.221047" elapsed="0.000184"/>
+</kw>
+<arg>${test_key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.211225" elapsed="0.010191"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.210793" elapsed="0.010930"/>
+</test>
+<test id="s1-s1-s1-s1-t5" name="Test Create Key Under Path" line="32">
+<kw name="Add Test Data To Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.233287" level="INFO">${response} = True</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.225113" elapsed="0.008216"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.233725" elapsed="0.000218"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>path_${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.224769" elapsed="0.009335"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.224259" elapsed="0.010048"/>
+</test>
+<test id="s1-s1-s1-s1-t6" name="Test Read Data Under Path" line="36">
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.240492" level="INFO">${response} = path_test_value_lvt</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.237252" elapsed="0.003281"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.241081" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.240882" elapsed="0.000255"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>path_${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.236923" elapsed="0.004493"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.236485" elapsed="0.005128"/>
+</test>
+<test id="s1-s1-s1-s1-t7" name="Test Update Data Under Path" line="40">
+<kw name="Update Test Data In Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.252301" level="INFO">${response} = True</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.244632" elapsed="0.007710"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.252692" elapsed="0.000183"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>update_path_${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.244301" elapsed="0.008732"/>
+</kw>
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.255187" level="INFO">${response} = update_path_test_value_lvt</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.253563" elapsed="0.001662"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-12-04T06:48:03.255766" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.255561" elapsed="0.000262"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>update_path_${test_value}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.253255" elapsed="0.002844"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.243866" elapsed="0.012421"/>
+</test>
+<test id="s1-s1-s1-s1-t8" name="Test Delete Data Under Path" line="45">
+<kw name="Delete Test Data From Consul" owner="keywords">
+<kw name="Delete Data" owner="ConsulLibrary">
+<msg time="2025-12-04T06:48:03.294532" level="INFO">${response} = True</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.259225" elapsed="0.035359"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-04T06:48:03.295064" elapsed="0.000223"/>
+</kw>
+<arg>${path_test_key}</arg>
+<status status="PASS" start="2025-12-04T06:48:03.258941" elapsed="0.036518"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-12-04T06:48:03.258519" elapsed="0.037136"/>
+</test>
+<status status="PASS" start="2025-12-04T06:48:02.107795" elapsed="1.190606"/>
+</suite>
+<status status="PASS" start="2025-12-04T06:48:02.106314" elapsed="1.195745"/>
+</suite>
+<status status="PASS" start="2025-12-04T06:48:02.104590" elapsed="1.198108"/>
+</suite>
+<status status="PASS" start="2025-12-04T06:48:02.030062" elapsed="1.273218"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="8" fail="0" skip="0">crud</stat>
+<stat pass="8" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="8" fail="0" skip="0">Tests</stat>
+<stat name="Consul" id="s1-s1" pass="8" fail="0" skip="0">Tests.Consul</stat>
+<stat name="Crud" id="s1-s1-s1" pass="8" fail="0" skip="0">Tests.Consul.Crud</stat>
+<stat name="Crud" id="s1-s1-s1-s1" pass="8" fail="0" skip="0">Tests.Consul.Crud.Crud</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-04T06:48:01.726903" level="WARN">Error in file '/opt/robot/tests/consul/alerts/alerts.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.795994" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 36: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.796451" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 48: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.797152" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 83: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.803878" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup_s3.robot' on line 50: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.804513" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup_s3.robot' on line 85: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.812612" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 27: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.812913" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 32: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-04T06:48:01.813417" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 54: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

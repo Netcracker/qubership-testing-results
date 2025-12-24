@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on linux)" generated="2025-12-03T00:47:28.677324" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/opt/robot/tests">
+<suite id="s1-s1" name="Consul" source="/opt/robot/tests/consul">
+<suite id="s1-s1-s1" name="Crud" source="/opt/robot/tests/consul/crud">
+<suite id="s1-s1-s1-s1" name="Crud" source="/opt/robot/tests/consul/crud/crud.robot">
+<kw name="Preparation" type="SETUP">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-12-03T00:47:29.999630" level="INFO">${random_id} = ipj</msg>
+<var>${random_id}</var>
+<arg>3</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-12-03T00:47:29.999282" elapsed="0.000397"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-03T00:47:30.000893" level="INFO">${test_key} = test_key_ipj</msg>
+<arg>${test_key}</arg>
+<arg>test_key_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-03T00:47:30.000171" elapsed="0.000784"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-03T00:47:30.001999" level="INFO">${path_test_key} = path_test_key/test_data_ipj</msg>
+<arg>${path_test_key}</arg>
+<arg>path_test_key/test_data_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-03T00:47:30.001348" elapsed="0.000706"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-12-03T00:47:30.003015" level="INFO">${test_value} = test_value_ipj</msg>
+<arg>${test_value}</arg>
+<arg>test_value_${random_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-12-03T00:47:30.002391" elapsed="0.060729"/>
+</kw>
+<status status="PASS" start="2025-12-03T00:47:29.998549" elapsed="0.065223"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Test Add Data" line="15">
+<kw name="Add Test Data To Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:30.068502" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f44056e7b60&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.065070" elapsed="0.010252">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f44056e7b60&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:30.075786" elapsed="0.000081"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>${test_value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.064676" elapsed="0.011435">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f44056e7b60&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.064028" elapsed="0.012357">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f44056e7b60&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Test Read Data" line="19">
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:30.082253" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faec10&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.079824" elapsed="0.008239">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faec10&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:30.088680" elapsed="0.000103"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>${test_value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.079330" elapsed="0.009758">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faec10&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.078766" elapsed="0.010710">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faec10&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Test Update Data" line="23">
+<kw name="Update Test Data In Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:30.096549" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faf750&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.094236" elapsed="0.006791">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faf750&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:30.101580" elapsed="0.000105"/>
+</kw>
+<arg>${test_key}</arg>
+<arg>update_${test_value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.093696" elapsed="0.008213">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faf750&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<arg>${test_key}</arg>
+<arg>update_${test_value}</arg>
+<status status="NOT RUN" start="2025-12-03T00:47:30.102228" elapsed="0.000086"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.093029" elapsed="0.009524">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4404faf750&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Test Delete Data" line="28">
+<kw name="Delete Test Data From Consul" owner="keywords">
+<kw name="Delete Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:30.168284" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405011810&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.166234" elapsed="0.005586">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405011810&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:30.172340" elapsed="0.000077"/>
+</kw>
+<arg>${test_key}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.165877" elapsed="0.006775">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405011810&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.165367" elapsed="0.007539">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/test_key_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405011810&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t5" name="Test Create Key Under Path" line="32">
+<kw name="Add Test Data To Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:30.177997" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405012190&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.176123" elapsed="0.005866">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405012190&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:30.182422" elapsed="0.000074"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>path_${test_value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.175751" elapsed="0.006949">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405012190&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.175292" elapsed="0.007630">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405012190&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t6" name="Test Read Data Under Path" line="36">
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<kw name="Get Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:30.187789" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405362f90&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.186023" elapsed="0.005020">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405362f90&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:30.191476" elapsed="0.000074"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>path_${test_value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.185681" elapsed="0.006077">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405362f90&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.185251" elapsed="0.006732">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405362f90&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t7" name="Test Update Data Under Path" line="40">
+<kw name="Update Test Data In Consul" owner="keywords">
+<kw name="Put Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:31.223438" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405035480&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<arg>${value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.195084" elapsed="1.031738">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405035480&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:31.227407" elapsed="0.000090"/>
+</kw>
+<arg>${path_test_key}</arg>
+<arg>update_path_${test_value}</arg>
+<status status="FAIL" start="2025-12-03T00:47:30.194743" elapsed="1.032974">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405035480&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Get And Check Test Data From Consul" owner="keywords">
+<arg>${path_test_key}</arg>
+<arg>update_path_${test_value}</arg>
+<status status="NOT RUN" start="2025-12-03T00:47:31.227986" elapsed="0.000076"/>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:30.194306" elapsed="1.034002">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405035480&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<test id="s1-s1-s1-s1-t8" name="Test Delete Data Under Path" line="45">
+<kw name="Delete Test Data From Consul" owner="keywords">
+<kw name="Delete Data" owner="ConsulLibrary">
+<msg time="2025-12-03T00:47:32.263426" level="FAIL">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405036360&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<var>${response}</var>
+<arg>${key}</arg>
+<status status="FAIL" start="2025-12-03T00:47:31.231412" elapsed="1.035694">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405036360&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-12-03T00:47:32.267705" elapsed="0.000091"/>
+</kw>
+<arg>${path_test_key}</arg>
+<status status="FAIL" start="2025-12-03T00:47:31.231095" elapsed="1.036959">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405036360&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</kw>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-12-03T00:47:31.230625" elapsed="1.037679">ConnectionError: HTTPConnectionPool(host='consul-server', port=8500): Max retries exceeded with url: /v1/kv/path_test_key/test_data_ipj (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f4405036360&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</status>
+</test>
+<status status="FAIL" start="2025-12-03T00:47:28.889671" elapsed="3.381250"/>
+</suite>
+<status status="FAIL" start="2025-12-03T00:47:28.888202" elapsed="3.386915"/>
+</suite>
+<status status="FAIL" start="2025-12-03T00:47:28.886491" elapsed="3.389350"/>
+</suite>
+<status status="FAIL" start="2025-12-03T00:47:28.801320" elapsed="3.475127"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="8" skip="0">crud</stat>
+<stat pass="0" fail="8" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="8" skip="0">Tests</stat>
+<stat name="Consul" id="s1-s1" pass="0" fail="8" skip="0">Tests.Consul</stat>
+<stat name="Crud" id="s1-s1-s1" pass="0" fail="8" skip="0">Tests.Consul.Crud</stat>
+<stat name="Crud" id="s1-s1-s1-s1" pass="0" fail="8" skip="0">Tests.Consul.Crud.Crud</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-03T00:47:28.593239" level="WARN">Error in file '/opt/robot/tests/consul/alerts/alerts.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.598052" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 36: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.598301" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 48: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.598869" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup.robot' on line 83: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.663884" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup_s3.robot' on line 50: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.664430" level="WARN">Error in file '/opt/robot/tests/consul/backup/backup_s3.robot' on line 85: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.670397" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 27: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.670568" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 32: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-03T00:47:28.670883" level="WARN">Error in file '/opt/robot/tests/consul/ha/consul_ha.robot' on line 54: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
