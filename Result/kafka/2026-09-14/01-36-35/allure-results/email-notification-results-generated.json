@@ -1,0 +1,155 @@
+{
+  "test_results": {
+    "overall_status": "PASSED",
+    "pass_rate": 100.00,
+    "pass_rate_rounded": 100,
+    "total_count": 18,
+    "passed_count": 18,
+    "failed_count": 0,
+    "skipped_count": 0,
+    "failure_rate": 0.00,
+    "coverage": 100.00
+  },
+  "execution_info": {
+    "execution_date": "2026-09-14 01:50:19",
+    "timestamp": "2026-09-14 01:50:19 UTC",
+    "environment_name": "kafka",
+    "atp_report_view_ui_url": "https://example.com",
+    "allure_report_url": "https://example.com/Report/kafka/2026-09-14/01-36-35/allure-report/index.html"
+  },
+  "test_details": [
+    {
+      "status": "PASSED",
+      "test_name": "Test Producing And Consuming Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Full Backup And Restore From Timestamp",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Find Backup",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Granular Backup And Restore",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Delete Backup By ID",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Full Backup And Granular Restore",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Container Hardening",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Kafka Is Degraded Alert",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Topic Deletion",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Not Evictable Backup",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Unclean Leader Election Metric",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Granular Backup And Restore By Topic Regex",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Topic Creation",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Full Backup And Restore",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Topic Change",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check JMX Metrics",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Rebalance Topic",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Kafka Is Down Alert",
+      "emoji": "✅"
+    }
+  ],
+  "environment_variables": {
+    "TEST_PASS_RATE": "100.00",
+    "TEST_PASS_RATE_ROUNDED": "100",
+    "TEST_TOTAL_COUNT": "18",
+    "TEST_PASSED_COUNT": "18",
+    "TEST_FAILED_COUNT": "0",
+    "TEST_SKIPPED_COUNT": "0",
+    "TEST_OVERALL_STATUS": "PASSED",
+    "TEST_FAILURE_RATE": "0.00",
+    "TEST_COVERAGE": "100.00",
+    "EXECUTION_DATE": "2026-09-14 01:50:19",
+    "ENVIRONMENT_NAME": "kafka",
+    "ATP_REPORT_VIEW_UI_URL": "https://example.com",
+    "ALLURE_REPORT_URL": "https://example.com/Report/kafka/2026-09-14/01-36-35/allure-report/index.html",
+    "TIMESTAMP": "2026-09-14 01:50:19 UTC"
+  },
+  "environment_variables_description": {
+    "description": "Variables used in email notification json file",
+    "variables": {
+      "TEST_OVERALL_STATUS": "Overall test status (PASSED/PARTIAL/FAILED)",
+      "TEST_PASS_RATE": "Pass rate percentage with 2 decimal places",
+      "TEST_TOTAL_COUNT": "Total number of tests",
+      "TEST_PASSED_COUNT": "Number of passed tests",
+      "TEST_FAILED_COUNT": "Number of failed tests",
+      "TEST_SKIPPED_COUNT": "Number of skipped tests",
+      "TEST_FAILURE_RATE": "Failure rate percentage",
+      "TEST_COVERAGE": "Test coverage percentage",
+      "EXECUTION_DATE": "Test execution date and time",
+      "ENVIRONMENT_NAME": "Environment name (dev/staging/prod)",
+      "ATP_REPORT_VIEW_UI_URL": "Base URL for viewing reports",
+      "ALLURE_REPORT_URL": "Full URL to Allure report",
+      "TIMESTAMP": "Current timestamp",
+      "TEST_DETAILS": "Details of all tests"
+    }
+  },
+  "status_logic": {
+    "description": "Logic for determining overall test status",
+    "rules": {
+      "PASSED": "100% of tests passed successfully",
+      "PARTIAL": "80-99% of tests passed successfully",
+      "FAILED": "Less than 80% of tests passed successfully"
+    }
+  }
+}
