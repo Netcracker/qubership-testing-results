@@ -1,0 +1,300 @@
+{
+  "test_results": {
+    "overall_status": "PARTIAL",
+    "pass_rate": 97.82,
+    "pass_rate_rounded": 97,
+    "total_count": 47,
+    "passed_count": 45,
+    "failed_count": 1,
+    "skipped_count": 1,
+    "failure_rate": 2.13,
+    "coverage": 100.00
+  },
+  "execution_info": {
+    "execution_date": "2026-09-30 00:43:49",
+    "timestamp": "2026-09-30 00:43:49 UTC",
+    "environment_name": "pgskipper-operator",
+    "atp_report_view_ui_url": "https://example.com",
+    "allure_report_url": "https://example.com/Report/pgskipper-operator/2026-09-30/00-32-44/allure-report/index.html"
+  },
+  "test_details": [
+    {
+      "status": "PASSED",
+      "test_name": "Check Daemon Full Backup Creation",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Multiple Users Creating By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Evict Backup By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Terminate Granular Backup Api Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Write And Read Marker",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check That After Redeploying Of Daemon DC Correct Health Probe Is Returned",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Scale Down Backup Daemon",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Marker Endpoint Requires Authentication",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Daemon Eviction API For Full Backups",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Requests Status Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Overwrite Marker",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check /health Endpoint For Full Backups",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup And Restore By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Restore Data Added After Backup",
+      "emoji": "✅"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Check API V1 Backup And Restore With S3 Alias Without Query Params",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check status restore request endpoint for not existing backup",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Auth Is Needed When Enabled",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Restore Request Endpoint For Failed Backup",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Deleting User By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Requests Status Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Encryption For Encrypted Backups",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Hardcoded Images",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check /health Endpoint For Full Backups With Wrong Request Method",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Daemon Full Backup Creation With Previous Backup Without Metric File",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Post Marker With Missing Field Returns 400",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Terminate Finished Backup Api Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Requests Status Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Creating Database By Dbaas Adapter With Extensions",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Updating User By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Container Hardening",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Terminate Full Backup Api Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check That After Switching Of WAL File, File Exists In Backup Storage",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Status Restore Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup-daemon Installation Correctness",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Creating Database By Dbaas Adapter With Not Valid Extensions",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Restore Request Endpoint For Regular Backup",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Deleting Database By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check backup restore request endpoint for restore with owner of DB",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Restore Request Endpoint With Specified DB",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Creating User By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Creating Database By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Restore Of Terminated Backup Api Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Requests Status Endpoint",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check List Databases By Dbaas Adapter",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Backup Restore Request Endpoint For Restore With Db Name Change",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check List Databases By Dbaas Adapter With Wrong Credentials",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Post Marker With Empty Marker Value Returns 400",
+      "emoji": "✅"
+    }
+  ],
+  "environment_variables": {
+    "TEST_PASS_RATE": "97.82",
+    "TEST_PASS_RATE_ROUNDED": "97",
+    "TEST_TOTAL_COUNT": "47",
+    "TEST_PASSED_COUNT": "45",
+    "TEST_FAILED_COUNT": "1",
+    "TEST_SKIPPED_COUNT": "1",
+    "TEST_OVERALL_STATUS": "PARTIAL",
+    "TEST_FAILURE_RATE": "2.13",
+    "TEST_COVERAGE": "100.00",
+    "EXECUTION_DATE": "2026-09-30 00:43:49",
+    "ENVIRONMENT_NAME": "pgskipper-operator",
+    "ATP_REPORT_VIEW_UI_URL": "https://example.com",
+    "ALLURE_REPORT_URL": "https://example.com/Report/pgskipper-operator/2026-09-30/00-32-44/allure-report/index.html",
+    "TIMESTAMP": "2026-09-30 00:43:49 UTC"
+  },
+  "environment_variables_description": {
+    "description": "Variables used in email notification json file",
+    "variables": {
+      "TEST_OVERALL_STATUS": "Overall test status (PASSED/PARTIAL/FAILED)",
+      "TEST_PASS_RATE": "Pass rate percentage with 2 decimal places",
+      "TEST_TOTAL_COUNT": "Total number of tests",
+      "TEST_PASSED_COUNT": "Number of passed tests",
+      "TEST_FAILED_COUNT": "Number of failed tests",
+      "TEST_SKIPPED_COUNT": "Number of skipped tests",
+      "TEST_FAILURE_RATE": "Failure rate percentage",
+      "TEST_COVERAGE": "Test coverage percentage",
+      "EXECUTION_DATE": "Test execution date and time",
+      "ENVIRONMENT_NAME": "Environment name (dev/staging/prod)",
+      "ATP_REPORT_VIEW_UI_URL": "Base URL for viewing reports",
+      "ALLURE_REPORT_URL": "Full URL to Allure report",
+      "TIMESTAMP": "Current timestamp",
+      "TEST_DETAILS": "Details of all tests"
+    }
+  },
+  "status_logic": {
+    "description": "Logic for determining overall test status",
+    "rules": {
+      "PASSED": "100% of tests passed successfully",
+      "PARTIAL": "80-99% of tests passed successfully",
+      "FAILED": "Less than 80% of tests passed successfully"
+    }
+  }
+}
