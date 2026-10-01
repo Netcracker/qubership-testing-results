@@ -1,0 +1,16 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Test Delete Data
+✅ PASSED | Test Create Key Under Path
+✅ PASSED | Test Leader Node Deleted
+✅ PASSED | Consul Does Not Exist Alert
+✅ PASSED | Test Update Data Under Path
+✅ PASSED | Test Value With Exceeding Limit Size
+✅ PASSED | Test Read Data Under Path
+✅ PASSED | Test Evict Backup By Id
+✅ PASSED | Test Granular Backup And Restore
+✅ PASSED | Test Full Backup And Restore
+✅ PASSED | Test Add Data
+✅ PASSED | Test Delete Data Under Path
+✅ PASSED | Test Read Data
+✅ PASSED | Test Update Data
