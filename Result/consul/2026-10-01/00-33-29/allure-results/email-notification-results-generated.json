@@ -1,0 +1,135 @@
+{
+  "test_results": {
+    "overall_status": "PASSED",
+    "pass_rate": 100.00,
+    "pass_rate_rounded": 100,
+    "total_count": 14,
+    "passed_count": 14,
+    "failed_count": 0,
+    "skipped_count": 0,
+    "failure_rate": 0.00,
+    "coverage": 100.00
+  },
+  "execution_info": {
+    "execution_date": "2026-10-01 00:38:55",
+    "timestamp": "2026-10-01 00:38:55 UTC",
+    "environment_name": "consul",
+    "atp_report_view_ui_url": "https://test.com",
+    "allure_report_url": "https://test.com/Report/consul/2026-10-01/00-33-29/allure-report/index.html"
+  },
+  "test_details": [
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Key Under Path",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Leader Node Deleted",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Consul Does Not Exist Alert",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Update Data Under Path",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Value With Exceeding Limit Size",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Read Data Under Path",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Evict Backup By Id",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Granular Backup And Restore",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Full Backup And Restore",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Add Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Data Under Path",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Read Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Update Data",
+      "emoji": "✅"
+    }
+  ],
+  "environment_variables": {
+    "TEST_PASS_RATE": "100.00",
+    "TEST_PASS_RATE_ROUNDED": "100",
+    "TEST_TOTAL_COUNT": "14",
+    "TEST_PASSED_COUNT": "14",
+    "TEST_FAILED_COUNT": "0",
+    "TEST_SKIPPED_COUNT": "0",
+    "TEST_OVERALL_STATUS": "PASSED",
+    "TEST_FAILURE_RATE": "0.00",
+    "TEST_COVERAGE": "100.00",
+    "EXECUTION_DATE": "2026-10-01 00:38:55",
+    "ENVIRONMENT_NAME": "consul",
+    "ATP_REPORT_VIEW_UI_URL": "https://test.com",
+    "ALLURE_REPORT_URL": "https://test.com/Report/consul/2026-10-01/00-33-29/allure-report/index.html",
+    "TIMESTAMP": "2026-10-01 00:38:55 UTC"
+  },
+  "environment_variables_description": {
+    "description": "Variables used in email notification json file",
+    "variables": {
+      "TEST_OVERALL_STATUS": "Overall test status (PASSED/PARTIAL/FAILED)",
+      "TEST_PASS_RATE": "Pass rate percentage with 2 decimal places",
+      "TEST_TOTAL_COUNT": "Total number of tests",
+      "TEST_PASSED_COUNT": "Number of passed tests",
+      "TEST_FAILED_COUNT": "Number of failed tests",
+      "TEST_SKIPPED_COUNT": "Number of skipped tests",
+      "TEST_FAILURE_RATE": "Failure rate percentage",
+      "TEST_COVERAGE": "Test coverage percentage",
+      "EXECUTION_DATE": "Test execution date and time",
+      "ENVIRONMENT_NAME": "Environment name (dev/staging/prod)",
+      "ATP_REPORT_VIEW_UI_URL": "Base URL for viewing reports",
+      "ALLURE_REPORT_URL": "Full URL to Allure report",
+      "TIMESTAMP": "Current timestamp",
+      "TEST_DETAILS": "Details of all tests"
+    }
+  },
+  "status_logic": {
+    "description": "Logic for determining overall test status",
+    "rules": {
+      "PASSED": "100% of tests passed successfully",
+      "PARTIAL": "80-99% of tests passed successfully",
+      "FAILED": "Less than 80% of tests passed successfully"
+    }
+  }
+}
