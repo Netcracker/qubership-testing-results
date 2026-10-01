@@ -1,0 +1,1 @@
+{"uuid": "d6ce6bd2-0d02-4b7c-a997-4bad491d7ec5", "children": ["4e226f2f-6f6b-485f-88ea-70620dce5b4f"], "afters": [{"name": "KafkaLibrary.Delete Topic", "status": "passed", "statusDetails": {}, "attachments": [{"name": "Keyword Log", "source": "5b7dd2c6-a0eb-4ed6-a38c-1cdc88cc0d48-attachment.html", "type": "text/html"}], "stop": 1788053901854}]}
