@@ -1,0 +1,34 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Granular Backup And Renaming Restore
+✅ PASSED | Search Document
+✅ PASSED | Basic Authentication With Invalid Credentials
+✅ PASSED | Set And Get Data Validation Marker
+✅ PASSED | Granular Backup And Renaming Restore With Manual Data Deletion
+✅ PASSED | Granular Backup And Restore With Obsolete Template
+✅ PASSED | Delete Backup By ID
+✅ PASSED | Update Document
+✅ PASSED | Delete Document
+✅ PASSED | Granular Backup And Restore With Component Templates
+✅ PASSED | Create Document
+✅ PASSED | Data Files Corrupted On Replica Shard
+✅ PASSED | Get Index
+✅ PASSED | Test Container Hardening
+✅ PASSED | Data Files Corrupted On Primary Shard
+✅ PASSED | OpenSearch Is Down Alert
+✅ PASSED | Granular Backup And Restore By Timestamp
+✅ PASSED | Create Index
+✅ PASSED | Basic Authentication With Valid Credentials
+✅ PASSED | Unauthorized Access
+✅ PASSED | Granular Backup And Renaming Restore With Cleanup
+✅ PASSED | Elected Master Is Crashed
+✅ PASSED | Granular Backup And Restore
+✅ PASSED | Granular Backup And Restore With Cleanup
+✅ PASSED | Granular Backup And Restore On S3 Storage
+✅ PASSED | Granular Backup And Restore With Template
+❌ FAILED | Granular Backup And Partial Renaming Restore
+✅ PASSED | Delete Index
+✅ PASSED | Find Backup By Timestamp
+✅ PASSED | Granular Backup And Restore With Alias
+✅ PASSED | Granular Backup And Restore With Template And Alias
+❌ FAILED | OpenSearch Is Degraded Alert
