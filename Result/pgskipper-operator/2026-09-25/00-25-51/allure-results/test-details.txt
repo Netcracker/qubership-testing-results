@@ -1,0 +1,14 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Check Scale Down Master
+✅ PASSED | Check User Creation
+✅ PASSED | Test Hardcoded Images
+✅ PASSED | Check Delete Master
+✅ PASSED | Check Update User
+✅ PASSED | Check Patroni REST Authentication
+✅ PASSED | Manual Switchover Via Patroni REST
+✅ PASSED | Check User Creation With Password
+✅ PASSED | Check Scale Down Replica
+✅ PASSED | Check Patroni REST
+❌ FAILED | Check Installation Patroni
+✅ PASSED | Check Deletion Of User
