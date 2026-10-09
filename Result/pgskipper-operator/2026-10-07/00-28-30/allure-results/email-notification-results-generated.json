@@ -1,0 +1,125 @@
+{
+  "test_results": {
+    "overall_status": "PASSED",
+    "pass_rate": 100.00,
+    "pass_rate_rounded": 100,
+    "total_count": 12,
+    "passed_count": 12,
+    "failed_count": 0,
+    "skipped_count": 0,
+    "failure_rate": 0.00,
+    "coverage": 100.00
+  },
+  "execution_info": {
+    "execution_date": "2026-10-07 00:30:26",
+    "timestamp": "2026-10-07 00:30:26 UTC",
+    "environment_name": "pgskipper-operator",
+    "atp_report_view_ui_url": "https://example.com",
+    "allure_report_url": "https://example.com/Report/pgskipper-operator/2026-10-07/00-28-30/allure-report/index.html"
+  },
+  "test_details": [
+    {
+      "status": "PASSED",
+      "test_name": "Check Scale Down Master",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check User Creation",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Hardcoded Images",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Delete Master",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Update User",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Patroni REST Authentication",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Manual Switchover Via Patroni REST",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check User Creation With Password",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Scale Down Replica",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Patroni REST",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Installation Patroni",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Check Deletion Of User",
+      "emoji": "✅"
+    }
+  ],
+  "environment_variables": {
+    "TEST_PASS_RATE": "100.00",
+    "TEST_PASS_RATE_ROUNDED": "100",
+    "TEST_TOTAL_COUNT": "12",
+    "TEST_PASSED_COUNT": "12",
+    "TEST_FAILED_COUNT": "0",
+    "TEST_SKIPPED_COUNT": "0",
+    "TEST_OVERALL_STATUS": "PASSED",
+    "TEST_FAILURE_RATE": "0.00",
+    "TEST_COVERAGE": "100.00",
+    "EXECUTION_DATE": "2026-10-07 00:30:26",
+    "ENVIRONMENT_NAME": "pgskipper-operator",
+    "ATP_REPORT_VIEW_UI_URL": "https://example.com",
+    "ALLURE_REPORT_URL": "https://example.com/Report/pgskipper-operator/2026-10-07/00-28-30/allure-report/index.html",
+    "TIMESTAMP": "2026-10-07 00:30:26 UTC"
+  },
+  "environment_variables_description": {
+    "description": "Variables used in email notification json file",
+    "variables": {
+      "TEST_OVERALL_STATUS": "Overall test status (PASSED/PARTIAL/FAILED)",
+      "TEST_PASS_RATE": "Pass rate percentage with 2 decimal places",
+      "TEST_TOTAL_COUNT": "Total number of tests",
+      "TEST_PASSED_COUNT": "Number of passed tests",
+      "TEST_FAILED_COUNT": "Number of failed tests",
+      "TEST_SKIPPED_COUNT": "Number of skipped tests",
+      "TEST_FAILURE_RATE": "Failure rate percentage",
+      "TEST_COVERAGE": "Test coverage percentage",
+      "EXECUTION_DATE": "Test execution date and time",
+      "ENVIRONMENT_NAME": "Environment name (dev/staging/prod)",
+      "ATP_REPORT_VIEW_UI_URL": "Base URL for viewing reports",
+      "ALLURE_REPORT_URL": "Full URL to Allure report",
+      "TIMESTAMP": "Current timestamp",
+      "TEST_DETAILS": "Details of all tests"
+    }
+  },
+  "status_logic": {
+    "description": "Logic for determining overall test status",
+    "rules": {
+      "PASSED": "100% of tests passed successfully",
+      "PARTIAL": "80-99% of tests passed successfully",
+      "FAILED": "Less than 80% of tests passed successfully"
+    }
+  }
+}
