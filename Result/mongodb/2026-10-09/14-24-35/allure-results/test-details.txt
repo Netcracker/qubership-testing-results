@@ -1,0 +1,8 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Test Update Document
+✅ PASSED | Test Delete Document
+⚠️ SKIPPED | Test Hardcoded Images For Supplementary Services
+✅ PASSED | Test Drop Collection
+⚠️ SKIPPED | Test Hardcoded Images
+✅ PASSED | Test Insert Documents
