@@ -1,0 +1,37 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Check Status Of Victoriametrics Api
+✅ PASSED | Check Non Mandatory Victoriametrics Target Metrics
+✅ PASSED | Check Kube State Metrics Pods Are Running
+⚠️ SKIPPED | Check Vmagent Route/Ingress Status
+⚠️ SKIPPED | Check Vmsingle Route/Ingress Status
+✅ PASSED | Verify Login To Grafana
+✅ PASSED | Check Node Exporter Pods Are Running
+✅ PASSED | Check Grafana Deployment Pods Are Running
+✅ PASSED | Check Monitoring Operator Pods Are Running
+⚠️ SKIPPED | Check Pushgateway Pods Are Running
+✅ PASSED | Check Vmalertmanager Pods Are Running
+✅ PASSED | Check Vmalert UI Status
+✅ PASSED | Check Apiserver Vmagent Target Metrics
+⚠️ SKIPPED | Test Hardcoded Images
+⚠️ SKIPPED | Check Pushgateway UI Status
+⚠️ SKIPPED | Check Vmagent UI Status
+✅ PASSED | Create Object Grafana Dashboard
+⚠️ SKIPPED | Check Pushgateway Route/Ingress Status
+✅ PASSED | Update GrafanaDashboard And Check It Updated
+✅ PASSED | Check Vmalert Route/Ingress Status
+✅ PASSED | Check Vmagent Pods Are Running
+✅ PASSED | Check Vmalert Pods Are Running
+✅ PASSED | Check Victoriametrics Operator Pods Are Running
+✅ PASSED | Check Etcd Vmagent Target Metrics
+✅ PASSED | Check Vmalertmanager Route/Ingress Status
+✅ PASSED | Delete Dashboard And Check It Deleted In Grafana
+✅ PASSED | Check Kubelet Vmagent Target Metrics
+✅ PASSED | Check Grafana Operator Pods Are Running
+✅ PASSED | Check Grafana Route/Ingress Status
+✅ PASSED | Check Vmauth Route/Ingress Status
+✅ PASSED | Check Vmsingle UI Status
+✅ PASSED | Check Vmalertmanager UI Status
+✅ PASSED | Check Targets UI Status
+✅ PASSED | Check Vmsingle Pods Are Running
+✅ PASSED | Check Grafana UI Status
