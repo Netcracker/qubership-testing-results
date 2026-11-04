@@ -1,0 +1,9 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Test Cassandra connection
+✅ PASSED | Test Create Table
+⚠️ SKIPPED | Test Hardcoded Images For Supplementary Services
+⚠️ SKIPPED | Test Hardcoded Images For Cassandra
+✅ PASSED | Test Insert Data
+✅ PASSED | Test Create Keyspace
+✅ PASSED | Test Delete Data
