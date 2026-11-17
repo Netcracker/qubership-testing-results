@@ -1,0 +1,49 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Check Daemon Full Backup Creation
+✅ PASSED | Check Multiple Users Creating By Dbaas Adapter
+✅ PASSED | Check Evict Backup By Dbaas Adapter
+✅ PASSED | Check Terminate Granular Backup Api Endpoint
+✅ PASSED | Write And Read Marker
+✅ PASSED | Check That After Redeploying Of Daemon DC Correct Health Probe Is Returned
+✅ PASSED | Check Scale Down Backup Daemon
+✅ PASSED | Marker Endpoint Requires Authentication
+✅ PASSED | Check Daemon Eviction API For Full Backups
+✅ PASSED | Check Backup Requests Status Endpoint
+✅ PASSED | Overwrite Marker
+✅ PASSED | Check /health Endpoint For Full Backups
+✅ PASSED | Check Backup And Restore By Dbaas Adapter
+✅ PASSED | Check Backup Restore Data Added After Backup
+⚠️ SKIPPED | Check API V1 Backup And Restore With S3 Alias Without Query Params
+✅ PASSED | Check status restore request endpoint for not existing backup
+✅ PASSED | Auth Is Needed When Enabled
+✅ PASSED | Check Backup Restore Request Endpoint For Failed Backup
+✅ PASSED | Check Deleting User By Dbaas Adapter
+✅ PASSED | Check Backup Requests Status Endpoint
+✅ PASSED | Check Encryption For Encrypted Backups
+✅ PASSED | Test Hardcoded Images
+✅ PASSED | Check /health Endpoint For Full Backups With Wrong Request Method
+✅ PASSED | Check Daemon Full Backup Creation With Previous Backup Without Metric File
+✅ PASSED | Post Marker With Missing Field Returns 400
+✅ PASSED | Check Terminate Finished Backup Api Endpoint
+✅ PASSED | Check Backup Requests Status Endpoint
+✅ PASSED | Check Creating Database By Dbaas Adapter With Extensions
+✅ PASSED | Check Updating User By Dbaas Adapter
+❌ FAILED | Test Container Hardening
+✅ PASSED | Check Terminate Full Backup Api Endpoint
+✅ PASSED | Check That After Switching Of WAL File, File Exists In Backup Storage
+✅ PASSED | Check Status Restore Endpoint
+✅ PASSED | Check Backup-daemon Installation Correctness
+✅ PASSED | Check Creating Database By Dbaas Adapter With Not Valid Extensions
+✅ PASSED | Check Backup Restore Request Endpoint For Regular Backup
+✅ PASSED | Check Deleting Database By Dbaas Adapter
+✅ PASSED | Check backup restore request endpoint for restore with owner of DB
+✅ PASSED | Check Backup Restore Request Endpoint With Specified DB
+✅ PASSED | Check Creating User By Dbaas Adapter
+✅ PASSED | Check Creating Database By Dbaas Adapter
+✅ PASSED | Check Restore Of Terminated Backup Api Endpoint
+✅ PASSED | Check Backup Requests Status Endpoint
+✅ PASSED | Check List Databases By Dbaas Adapter
+✅ PASSED | Check Backup Restore Request Endpoint For Restore With Db Name Change
+✅ PASSED | Check List Databases By Dbaas Adapter With Wrong Credentials
+✅ PASSED | Post Marker With Empty Marker Value Returns 400
