@@ -1,0 +1,355 @@
+{
+  "test_results": {
+    "overall_status": "FAILED",
+    "pass_rate": 42.86,
+    "pass_rate_rounded": 43,
+    "total_count": 58,
+    "passed_count": 21,
+    "failed_count": 28,
+    "skipped_count": 9,
+    "failure_rate": 48.28,
+    "coverage": 100.00
+  },
+  "execution_info": {
+    "execution_date": "2026-11-24 11:15:15",
+    "timestamp": "2026-11-24 11:15:15 UTC",
+    "environment_name": "cassandra",
+    "atp_report_view_ui_url": "https://test.com",
+    "allure_report_url": "${ATP_REPORT_VIEW_UI_URL}/Report/cassandra/2026-11-24/11-09-55/allure-report/index.html"
+  },
+  "test_details": [
+    {
+      "status": "FAILED",
+      "test_name": "Test Restore Data",
+      "emoji": "❌"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Check Connection To TLS Backup Daemon By Not Correct Port",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Set Marker Replaces Existing",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Cassandra connection",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Check Restored Granular Data",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Granular Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Backup Eviction",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Table",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Get Marker Returns Single Record",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Data Directly",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Granular Backup",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Recovery With RegenerateNames",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Table Level Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test HA Case",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Set Marker",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Check Restored Granular Data Directly",
+      "emoji": "❌"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Test Hardcoded Images For Supplementary Services",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Restore Table Level",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Keyspace",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Update Meta In Database",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Backup Table Level",
+      "emoji": "❌"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Check Connection To TLS Dbaas Adapter By Not Correct Port",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Test Hardcoded Images For Cassandra",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Insert Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Data Directly",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Recovery With System Keyspaces",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Backup Granular Data",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Drop Database",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Granular Restore From Full Backup",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Wrong Backup Credentials",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Empty DB Value",
+      "emoji": "❌"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Check Connection To TLS Backup Daemon By HTTP Protocol",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Recovery With Empty Keyspace",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Granular Data Directly",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Test Users Backup And Restore",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Keyspace",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Check Meta In Database",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Full Restore",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Check Keyspace List",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Full Backup",
+      "emoji": "❌"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Check Connection To TLS Dbaas Adapter By HTTP Protocol",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Granular Data Directly",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Granular Restore",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Full Backup Data",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Restore Granular Data",
+      "emoji": "❌"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Backup Saved On Pod After Restart",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Delete Granular Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Check All Restored Data Directly",
+      "emoji": "❌"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Check Connection To TLS Cassandra Without Cert",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "SKIPPED",
+      "test_name": "Test Multiple Users Creating",
+      "emoji": "⚠️"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Table Level Data",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Get Marker Response Contains Only Marker Value",
+      "emoji": "❌"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Wrong Credentials",
+      "emoji": "✅"
+    },
+    {
+      "status": "PASSED",
+      "test_name": "Test Create Users To Database",
+      "emoji": "✅"
+    },
+    {
+      "status": "FAILED",
+      "test_name": "Test Check All Restored Data",
+      "emoji": "❌"
+    }
+  ],
+  "environment_variables": {
+    "TEST_PASS_RATE": "42.86",
+    "TEST_PASS_RATE_ROUNDED": "43",
+    "TEST_TOTAL_COUNT": "58",
+    "TEST_PASSED_COUNT": "21",
+    "TEST_FAILED_COUNT": "28",
+    "TEST_SKIPPED_COUNT": "9",
+    "TEST_OVERALL_STATUS": "FAILED",
+    "TEST_FAILURE_RATE": "48.28",
+    "TEST_COVERAGE": "100.00",
+    "EXECUTION_DATE": "2026-11-24 11:15:15",
+    "ENVIRONMENT_NAME": "cassandra",
+    "ATP_REPORT_VIEW_UI_URL": "https://test.com",
+    "ALLURE_REPORT_URL": "${ATP_REPORT_VIEW_UI_URL}/Report/cassandra/2026-11-24/11-09-55/allure-report/index.html",
+    "TIMESTAMP": "2026-11-24 11:15:15 UTC"
+  },
+  "environment_variables_description": {
+    "description": "Variables used in email notification json file",
+    "variables": {
+      "TEST_OVERALL_STATUS": "Overall test status (PASSED/PARTIAL/FAILED)",
+      "TEST_PASS_RATE": "Pass rate percentage with 2 decimal places",
+      "TEST_TOTAL_COUNT": "Total number of tests",
+      "TEST_PASSED_COUNT": "Number of passed tests",
+      "TEST_FAILED_COUNT": "Number of failed tests",
+      "TEST_SKIPPED_COUNT": "Number of skipped tests",
+      "TEST_FAILURE_RATE": "Failure rate percentage",
+      "TEST_COVERAGE": "Test coverage percentage",
+      "EXECUTION_DATE": "Test execution date and time",
+      "ENVIRONMENT_NAME": "Environment name (dev/staging/prod)",
+      "ATP_REPORT_VIEW_UI_URL": "Base URL for viewing reports",
+      "ALLURE_REPORT_URL": "Full URL to Allure report",
+      "TIMESTAMP": "Current timestamp",
+      "TEST_DETAILS": "Details of all tests"
+    }
+  },
+  "status_logic": {
+    "description": "Logic for determining overall test status",
+    "rules": {
+      "PASSED": "100% of tests passed successfully",
+      "PARTIAL": "80-99% of tests passed successfully",
+      "FAILED": "Less than 80% of tests passed successfully"
+    }
+  }
+}

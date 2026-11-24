@@ -1,0 +1,60 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+❌ FAILED | Test Restore Data
+⚠️ SKIPPED | Check Connection To TLS Backup Daemon By Not Correct Port
+❌ FAILED | Test Set Marker Replaces Existing
+✅ PASSED | Test Cassandra connection
+❌ FAILED | Test Check Restored Granular Data
+✅ PASSED | Test Create Data
+✅ PASSED | Test Create Granular Data
+❌ FAILED | Test Backup Eviction
+✅ PASSED | Test Create Table
+❌ FAILED | Test Get Marker Returns Single Record
+✅ PASSED | Test Delete Data Directly
+❌ FAILED | Test Granular Backup
+❌ FAILED | Test Recovery With RegenerateNames
+✅ PASSED | Test Delete Table Level Data
+✅ PASSED | Test HA Case
+❌ FAILED | Test Set Marker
+❌ FAILED | Test Check Restored Granular Data Directly
+⚠️ SKIPPED | Test Hardcoded Images For Supplementary Services
+❌ FAILED | Test Restore Table Level
+✅ PASSED | Test Create Keyspace
+❌ FAILED | Test Update Meta In Database
+❌ FAILED | Test Backup Table Level
+⚠️ SKIPPED | Check Connection To TLS Dbaas Adapter By Not Correct Port
+⚠️ SKIPPED | Test Hardcoded Images For Cassandra
+✅ PASSED | Test Insert Data
+✅ PASSED | Test Create Data Directly
+❌ FAILED | Test Recovery With System Keyspaces
+❌ FAILED | Test Backup Granular Data
+✅ PASSED | Test Drop Database
+❌ FAILED | Test Granular Restore From Full Backup
+❌ FAILED | Test Wrong Backup Credentials
+❌ FAILED | Test Empty DB Value
+⚠️ SKIPPED | Check Connection To TLS Backup Daemon By HTTP Protocol
+❌ FAILED | Test Recovery With Empty Keyspace
+✅ PASSED | Test Delete Granular Data Directly
+✅ PASSED | Test Delete Data
+⚠️ SKIPPED | Test Users Backup And Restore
+✅ PASSED | Test Create Keyspace
+❌ FAILED | Test Check Meta In Database
+❌ FAILED | Test Full Restore
+✅ PASSED | Test Check Keyspace List
+❌ FAILED | Test Full Backup
+⚠️ SKIPPED | Check Connection To TLS Dbaas Adapter By HTTP Protocol
+✅ PASSED | Test Create Granular Data Directly
+❌ FAILED | Test Granular Restore
+✅ PASSED | Test Delete Data
+❌ FAILED | Test Full Backup Data
+❌ FAILED | Test Restore Granular Data
+❌ FAILED | Backup Saved On Pod After Restart
+✅ PASSED | Test Delete Granular Data
+❌ FAILED | Test Check All Restored Data Directly
+⚠️ SKIPPED | Check Connection To TLS Cassandra Without Cert
+⚠️ SKIPPED | Test Multiple Users Creating
+✅ PASSED | Test Create Table Level Data
+❌ FAILED | Test Get Marker Response Contains Only Marker Value
+✅ PASSED | Test Wrong Credentials
+✅ PASSED | Test Create Users To Database
+❌ FAILED | Test Check All Restored Data
