@@ -1,0 +1,23 @@
+Status       | Test Name
+------------ | ------------------------------------------------------------
+✅ PASSED | Test Connection
+✅ PASSED | Kill All Pods At Once w/o Data
+✅ PASSED | Granular Backup With A Lot Of Queues
+✅ PASSED | Test Change Rabbitmq Password With Operator
+✅ PASSED | Full Backup And Restore
+✅ PASSED | Test Change Password Function With Kill All Pods
+✅ PASSED | Kill All Pods By Asc w/o Data
+✅ PASSED | Kill Part Of Pods
+✅ PASSED | Test Change Password Function
+✅ PASSED | Test Cluster
+✅ PASSED | Kill All Pods At Once
+✅ PASSED | Create Queue, User And Vhost
+✅ PASSED | RabbitMQ No Metrics Alert
+✅ PASSED | Kill Part Of Pods w/o Data
+✅ PASSED | Granular Backup And Restore
+✅ PASSED | Not Evictable Backup
+✅ PASSED | Kill All Pods Order By Asc Order
+✅ PASSED | Check RabbitMQ Backup Endpoints
+✅ PASSED | Kill All Pods By Desc w/o Data
+✅ PASSED | HA Queue Test
+✅ PASSED | Kill All Pods Order By Desc
